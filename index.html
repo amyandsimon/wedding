@@ -1,25 +1,46 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title></title>
+<title>Amy and Simon</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
+* {
+	padding: 0;
+	margin: 0
+}
+
+
+#main .logo {
+	float: left;
+
+}
+
+.logo	{
+	background: url(logo.png);
+	width: 150px;
+	height: 150px;
+	background-position: centre;
+	background-size: cover;
+	margin-top: 0px;
+	margin-left: 0px;
+}
 body {
-
-	background-image: url('grunge_patterns.jpg');
-	background-attachment: fixed;
-	color: #333;
+	background-image: url('background.jpg');
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
 }
 
 .box {
 	border-radius: 3px;
-	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
+	background: rgba(101, 101, 101, 0.5); margin: auto; padding: 12px;
 }
 
 .lightbox {
@@ -32,7 +53,10 @@ body {
 	background: rgba(10, 10, 10, 0.8);
 	text-align: center;
 	margin: auto;
+}
 
+.p1 {
+	font-family: 'Roboto', sans-serif;
 }
 
 div.horizontal {
@@ -56,6 +80,7 @@ div.vertical {
 ::-moz-placeholder {
    color: #955;
    text-align: center;
+   font-family: sans-serif;
 }
 
 :-ms-input-placeholder {
@@ -66,13 +91,18 @@ div.vertical {
 </style>
 
 <body>
-
+<header>
+	<div id="main">
+		<div class="logo"></div>		
+	</div>
+</header>
 	<div id="loginbox" class="lightbox" >
 		<div class="horizontal">
 			<div class="vertical">
 				<div class="box">
-					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
+					<p class="p1">Use Amy's surname in the box below to enter...</p>
+					<input style="margin: 16px; text-align: center; font-family: 'Roboto', sans-serif;" id="password" type="password" placeholder="password" /> <br />
+					<button style="font-family: 'Roboto', sans-serif;" id="loginbutton" type="button">Enter</button>
 					<p id="wrongPassword" style="display: none">wrong password</p>
 				</div>
 			</div>
