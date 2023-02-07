@@ -1,0 +1,11 @@
+Added     width: 5000px; to 
+.banner_content{
+	margin-top: 270px;
+    width: 5000px;
+}
+
+in style.css
+
+
+---------
+
