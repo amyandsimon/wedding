@@ -304,12 +304,11 @@ a:hover{
     background-repeat: no-repeat;
 }
 .banner_bg{
-    background-image: url(../images/banner1.jpg);
-    background-image: url(../images/banner2.jpg);
-    width: 50%;
-    position:;
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center center;
+    position: relative;
 }
-
 .banner_bg:before{
     content: "";
     position: absolute;
