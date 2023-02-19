@@ -541,13 +541,13 @@ a:hover{
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    height: 100vh;
 }
 
 /* Set a smaller background size for screens smaller than 768px */
 @media (max-width: 767px) {
   .cta_section {
-    background-size: contain;
+    background-size: 160%;
   }
 }
 
