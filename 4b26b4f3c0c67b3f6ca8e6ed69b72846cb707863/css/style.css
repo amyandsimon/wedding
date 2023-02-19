@@ -301,15 +301,6 @@ a:hover{
   height: 100vh;
 }
 
-.invite_banner {
-  background-image: url(../images/banner_02.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  justify-content: center;
-  align-items: center;
-  width: 100vh;
-}
-
 .banner_bg:before{
     content: "";
     position: absolute;
@@ -323,16 +314,13 @@ a:hover{
 .banner_content{
   margin-top: 35%;
   margin-left: 15%;
-  white-space: nowrap;
 }
 .banner_content strong{
     text-transform: capitalize;
-    color: #1f4821;
     font-size: 55px;
     font-weight: 900;
 }
 .banner_content h1{
-    color: #1f4821;
     font-size: 50px;    
     font-weight: 900;
     text-transform: capitalize;
@@ -347,6 +335,7 @@ a:hover{
 .banner_content p{
     color: #1f4821;
 }
+
 
 /* ----------------------------------------------------------------
     [ End Banner ]
@@ -549,10 +538,24 @@ a:hover{
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    display: flex;
+    background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 75vh;
+}
+
+/* Set a smaller background size for screens smaller than 768px */
+@media (max-width: 767px) {
+  .cta_section {
+    background-size: contain;
+  }
+}
+
+/* Set a larger background size for screens larger than 768px */
+@media (min-width: 768px) {
+  .cta_section {
+    background-size: cover;
+  }
 }
 
 .cta_section:before{
