@@ -292,18 +292,22 @@ a:hover{
 /* ----------------------------------------------------------------
      [ 04 Start Banner ]
 -----------------------------------------------------------------*/
-
-.banner_left{
-    background-image: url(../images/banner_01.jpg);
-    height:850px;
-    background-size: cover;
-    background-repeat: no-repeat;
+.main_banner {
+  background-image: url(../images/banner_01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.banner_right{
-    background-image: url(../images/banner_02.jpg);
-    height:850px;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+.invite_banner {
+  background-image: url(../images/banner_02.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
 }
 
 .banner_bg:before{
@@ -315,6 +319,7 @@ a:hover{
     height: 100%;
     background: rgba(0, 0, 0, 0.1);
 }
+
 .banner_content{
     margin-top: 35%;
     margin-left: 15%;
@@ -488,13 +493,52 @@ a:hover{
 /* ----------------------------------------------------------------
     [ 07 Start Cta ]
 -----------------------------------------------------------------*/
-.cta_section{
-    background: url(../images/cta-action.jpg);
-    position: relative;
-    background-size: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+#countdown {
+  display: flex;
+  justify-content: space-between;
 }
+
+.countdown-box {
+  width: 22%;
+  background-color: rgba(255, 255, 255, 0.8); /* white with 80% opacity */
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.countdown-value {
+  font-size: 48px;
+}
+
+.countdown-label {
+  font-size: 24px;
+}
+
+/* Adjust layout for screens smaller than 768px */
+@media (max-width: 767px) {
+  #countdown {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .countdown-box {
+    margin-bottom: 20px;
+    width: 80%;
+  }
+}
+
+.cta_section {
+  background: url(../images/cta-action.jpg);
+  position: relative;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .cta_section:before{
     position: absolute;
     content: "";
@@ -504,6 +548,37 @@ a:hover{
     height: 100%;
 }
 .cta_content h3 {
+    color: #fff;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+/* ----------------------------------------------------------------
+    [ End Cta ]
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+    [ 08 Start Cta ]
+-----------------------------------------------------------------*/
+.cta_section2{
+    background: url(../images/cta-action.jpg);
+    position: relative;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.cta_section2:before{
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.cta_content2 h3 {
     color: #fff;
     font-size: 30px;
     text-transform: capitalize;
@@ -678,7 +753,7 @@ a:hover{
     background: #f0bb62;
 }
 .edu-list > li::after{
-    content: "\e032";
+    content: "\e059";
     position: absolute;
     top: 0;
     left: -50px;

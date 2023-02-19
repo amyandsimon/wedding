@@ -45,11 +45,11 @@
 		<!-- END NAVBAR -->			
 		
 		<!-- START BANNER-SHOW -->
-			<section id="home">
+		<section id="home" class="main_banner">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-8 col-sm-12 col-xs-12 banner_left">
-							<div class="banner_content">								
+						<div class="col-md-6 col-sm-12 col-xs-12">
+							<div class="banner_content">
 								<h1 class="cd-headline clip">
 									<span class="fw_600">We Are</span>
 									<br>
@@ -62,13 +62,22 @@
 								<p>Welcome to our wedding website.
 							</div>
 						</div>
-
-						<div class="col-md-6 col-sm-12 col-xs-12 banner_right">
-
-						</div>
+					</div>
 				</div>
 			</section>
 		<!-- END BANNER-SHOW -->
+
+		<!-- START BANNER-SHOW -->
+		<section id="home" class="invite_banner">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-12 col-xs-12">
+						</div>
+					</div>
+				</div>
+			</section>
+		<!-- END BANNER-SHOW -->
+
 		
 		<!-- START ABOUT -->
 			<section id="about" class="gray_bg1 section_padding">
@@ -145,10 +154,61 @@
 			<section class="cta_section section_padding">
 				<div class="container">
 					<div class="row">
-						<br>
-						<br>
-						<br>
-						<br>
+						<script>
+							// Set the date we're counting down to
+								var countDownDate = new Date("July 30, 2023 00:00:00").getTime();
+
+								// Update the countdown every 1 second
+								var x = setInterval(function() {
+
+								  // Get today's date and time
+								  var now = new Date().getTime();
+
+								  // Find the distance between now and the countdown date
+								  var distance = countDownDate - now;
+
+								  // Calculate the months, days, hours, minutes and seconds left
+								  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+								  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+								  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+								  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+								  // Display the countdown timer in the HTML
+								  document.getElementById("days").innerHTML = days;
+								  document.getElementById("hours").innerHTML = hours;
+								  document.getElementById("minutes").innerHTML = minutes;
+								  document.getElementById("seconds").innerHTML = seconds;
+
+								  // If the countdown is over, stop updating the countdown
+								  if (distance < 0) {
+								    clearInterval(x);
+								    document.getElementById("countdown").innerHTML = "The wedding is over! We hope you had a wonderful day";
+								  }
+								}, 1000);
+
+						</script>
+						<div id="countdown">
+						  <div class="countdown-box">
+						    <span class="countdown-value" id="days"></span>
+						    <br>
+						    <span class="countdown-label">Days</span>
+						  </div>
+						  <div class="countdown-box">
+						    <span class="countdown-value" id="hours"></span>
+						    <br>
+						    <span class="countdown-label">Hours</span>
+						  </div>
+						  <div class="countdown-box">
+						    <span class="countdown-value" id="minutes"></span>
+						    <br>
+						    <span class="countdown-label">Minutes</span>
+						  </div>
+						  <div class="countdown-box">
+						    <span class="countdown-value" id="seconds"></span>
+						    <br>
+						    <span class="countdown-label">Seconds</span>
+						  </div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -175,16 +235,16 @@
 						</div>
 
 						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-service wow fadeInLeft">
+							<div class="single-service wow fadeInUp">
 								<h4>What time will the ceremony start?</h4>
 								<P>We ask guests to arrive at the Church no later than 12:30pm</P>
 							</div>
 						</div>
 
 						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-service wow fadeInLeft">
+							<div class="single-service wow fadeInRight">
 								<h4>How should I RSVP?</h4>
-								<P>To RSVP, please send an e-mail to: <br><a href="mailto:wedding@amyandsimon.com">wedding@amyandsimon.com</a><br>To help our planning, please include any dietary requirements</P>
+								<P>To RSVP, please send an mail to: <br><a href="mailto:wedding@amyandsimon.com">wedding@amyandsimon.com</a><br>To help our planning, please include any dietary requirements</P>
 							</div>
 						</div>
 					</div>
@@ -198,14 +258,14 @@
 						</div>
 
 						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-service wow fadeInLeft">
+							<div class="single-service wow fadeInUp">
 								<h4>Are you having an unplugged wedding?</h4>
-								<P>We’ve asked a professional photographer and videographer to capture the special moments on our day. We ask that you turn off your phones and cameras at the church, so that you can be fully present during our ceremony. Our images will be available after the wedding.</P>
+								<P>We’ve asked a professional photographer and videographer to capture the special moments on our day. We ask that you turn off your phones and cameras at the church, so that you can be fully present during our ceremony.Our beautiful images will be available after the wedding.</P>
 							</div>
 						</div>
 
 						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-service wow fadeInLeft">
+							<div class="single-service wow fadeInRight">
 								<h4>How can I travel to the chuch?</h4>
 								<P>The church is located on Lichfield Road, in Sutton Coldfield. There is parking available at the Church and a further car park is available opposite the church at Bishop Vesey School on Boswell Road.</P>
 								<P>If you are travelling by Train, Sutton Coldfield Train station is the nearest station, and is a 10 minute walk, or short taxi ride away. </P>
@@ -223,7 +283,7 @@
 						</div>
 
 						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-service wow fadeInLeft">
+							<div class="single-service wow fadeInUp">
 								<h4>Should I bring a gift?</h4>
 								<P>Your presence at our wedding is the greatest gift of all. Please do not feel obligated to give anything else. However, should you feel inclined, we are very much looking forward to a honeymoon and any contribution towards that will always be sincerely appreciated.</P>
 							</div>
@@ -231,7 +291,7 @@
 
 
 						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="single-service wow fadeInLeft">
+							<div class="single-service wow fadeInRight">
 								<h4>What is the schedule for the day?</h4>
 								<P>We are still working through the details of the day, and will update this site with a schedule and timetable of what to expect on the day.</P>
 							</div>
